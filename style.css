@@ -311,3 +311,14 @@ body {
     color: black;
     font-family: 'Zen Dots', cursive;
 }
+
+.last-page .score-box {
+    display: flex;
+    margin-top: 300px;
+    text-align: center;
+}
+
+.last-page h1 {
+    font-family: 'Unbounded', cursive;
+    font-size: 30px;
+}

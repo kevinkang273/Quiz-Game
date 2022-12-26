@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(".main-page").hide();
-
+    $(".last-page").hide();
 
     // DOM Manipulation
     $(".start").click(function () {
@@ -17,7 +17,10 @@ $(document).ready(function () {
         currentQuestion++;
 
         if (currentQuestion == 6) {
-
+            $(".main-page").hide();
+            $(".last-page").show();
+            console.log(currentQuestion);
+            displayScore();
         } else {
             showQuestion();
         }
@@ -113,15 +116,15 @@ $(document).ready(function () {
          
         }
 
-
-
         console.log(out);
-
-
     }
 
     function hideOtherButtons(button) {
         $(".questions button").hide();
         $(button).show();
+    }
+
+    function displayScore() {
+        $(".last-page").append(`<h1 class="score">${score}</h1>`);
     }
 });
