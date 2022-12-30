@@ -24,6 +24,8 @@ $(document).ready(function () {
         } else {
             showQuestion();
         }
+
+        
     });
 
 
@@ -92,10 +94,12 @@ $(document).ready(function () {
             
             $(this).prop('disabled', true);
             hideOtherButtons(this);
+            enableNextButton();
         });
         
 
         console.log(quizQuestions[currentQuestion].answer);
+        $(".next-question").prop('disabled', true);
 
     }
 
@@ -125,6 +129,11 @@ $(document).ready(function () {
     }
 
     function displayScore() {
-        $(".last-page").append(`<h1 class="score">${score}</h1>`);
+        $(".last-page").append(`<h1>You scored: <span class="score">${score}</span></h1>`);
+    }
+
+    function enableNextButton() {
+        $(".next-question").prop('disabled', false);
+
     }
 });

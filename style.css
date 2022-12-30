@@ -251,8 +251,9 @@ html {
 
 body {
     /* background-color: skyblue; */
-    background-image: url(../Quiz/background\ cover.webp);
-
+    background-image: url(../Quiz/quiz_cover.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .start-page {
@@ -282,10 +283,11 @@ body {
     width: calc(50% - 40px);
     margin: 5px;
     margin-bottom: 5px;
-    background-color: rgb(222, 244, 20);
+    background-color: rgb(192, 255, 252);
     cursor: pointer;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 20px;
+    color: black;   
 }
 
 .questions h1 {
@@ -301,8 +303,8 @@ body {
     padding: 10px 40px;
     text-align: center;
     cursor: pointer;
-    color: green;
-    background-color: rgb(233, 233, 233);
+    color: rgb(255, 255, 255);
+    background-color: rgb(49, 111, 244);
     font-size: 10px;
 }
 
@@ -312,13 +314,21 @@ body {
     font-family: 'Zen Dots', cursive;
 }
 
-.last-page .score-box {
-    display: flex;
+.last-page h1 {
     margin-top: 300px;
     text-align: center;
-}
-
-.last-page h1 {
     font-family: 'Unbounded', cursive;
     font-size: 30px;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .start-page h1 {
+        font-size: 5rem;
+       
+    }
+    .questions h1 {
+        font-size: 30px;
+
+    }
 }
