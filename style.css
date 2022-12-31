@@ -331,4 +331,9 @@ body {
         font-size: 30px;
 
     }
+
+    body {
+        background-size: cover;
+        height: 100vh;
+    }
 }
